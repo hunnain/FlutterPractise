@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -67,12 +67,46 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: new FlutterLogo(
+          colors: Colors.green,
+          size: 25.0,
+        ),
+        elevation: 0.0,
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back),
+          color: Colors.grey
+        ),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+            color: Colors.grey,
+          )
+        ],
       ),
-      body: Center(
-        
+      body: ListView(
+        shrinkWrap: true,
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                alignment: Alignment(0.0, -0.40),
+                height: 100.0,
+                color: Colors.white,
+                child: Text(
+                  'Get Coaching',
+                  style: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontSize: 20.0,
+                  ),
+                ),
+              )
+            ],
+          )
+        ],
       ),
     );
   }
