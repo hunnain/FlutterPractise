@@ -233,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.green,
                     image: DecorationImage(
                         image: NetworkImage(
-                            'https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/04/tony-stark-header.jpg'))),
+                            'https://static1.srcdn.com/wordpress/wp-content/uploads/2018/12/Captain-Marvel-Avengers-Endgame-Tony-Stark.jpg'))),
               ),
               SizedBox(
                 height: 8.0,
@@ -249,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 15.0,
               ),
-              Expanded(
+              Expanded (
                 child: Container(
                   width: 175.0,
                   decoration: BoxDecoration(
