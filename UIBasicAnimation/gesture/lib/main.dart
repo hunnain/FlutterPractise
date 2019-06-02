@@ -41,7 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: new Center(
           child: GestureDetector(
-            onLongPress: () {
+            child: InkWell(
+            onTap: () {
               print("Clicked Me");
             },
             child: Container(
@@ -49,11 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 100.0,
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                color: Colors.lightBlueAccent,
+                // color: Colors.lightBlueAccent,r
                 borderRadius: BorderRadius.circular(15.0)
               ),
               child: Center(child: Text('Click Me')),
             ),
+            )
           ),
       )
     );
