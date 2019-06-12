@@ -18,56 +18,31 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
+        brightness: Brightness.dark
       ),
-      home: Center(
-  child: Column(
-    children: <Widget>[
-      Container(
-        color: Colors.red,
-        width: 100.0,
-        height: 100.0,
-      ),
-      Container(
-        color: Colors.blue,
-        width: 100.0,
-        height: 100.0,
-      ),
-      Container(
-        color: Colors.green,
-        width: 100.0,
-        height: 100.0,
-      ),
-    ],
-  ),
-),
+      home: MyHomePage(),
     );
   }
 }
 
 
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-// class CustomCard extends StatelessWidget {
-//   CustomCard({
-//     // @required this.index, 
-//     @required this.onPress
-//   })
-//   // final index;
-//    Function onPress;
-
-//   @override
-//   Widget build(BuildContext context) {
-    
-//     return Card(
-//       child: Column(
-//         children: <Widget>[
-//           Text('Card '),
-//           FlatButton(
-//             child: const Text('Press'),
-//             onPressed: this.onPress,
-//           ),
-//         ],
-//       )
-//     );
-//   }
-// }
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+      data: ThemeData(
+        primaryColor: Colors.cyan,
+        brightness: Brightness.light,
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.red,
+      ),
+    );
+  }
+}
