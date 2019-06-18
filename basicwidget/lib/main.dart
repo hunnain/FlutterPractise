@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(title: 'My App',home: MyScaffold(),));
+void main() => runApp(HomeWidget());
+
+class HomeWidget extends StatelessWidget{
+  @protected
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: 'My App',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: MyScaffold(),
+    );
+  }
+}
 
 class MyAppBar extends StatelessWidget{
     MyAppBar({
@@ -11,9 +24,9 @@ class MyAppBar extends StatelessWidget{
     @override
     Widget build(BuildContext context){
       return Container(
-        height: 56.0,
+        height: 86.0,
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        decoration: BoxDecoration(color: Colors.blue[500]),
+        decoration: BoxDecoration(color: Colors.red[500]),
         child: Row(
           children: <Widget>[
             IconButton(
