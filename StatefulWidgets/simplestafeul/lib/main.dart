@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: 'App Title',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: Counter(title:"App Title"),
     );
@@ -41,16 +41,32 @@ class _CounterState extends State<Counter>{
 
   @override
   Widget build(BuildContext context){
+    // return Scaffold(
+    //   appbar:AppBar(
+    //     title: Text(widget.title),
+    //   ),
+    //   body: Center(
+        // child: Text('Counter: $_counter',style: TextStyle(color: Colors.blue,decoration: TextDecoration.none)),
+    //   ),
+    //   FloatingActionButton(
+    //       onPressed: incrementFunction,
+    //       tooltip: 'Increment',
+    //     child: Icon(Icons.add),
+    //   ),
+    // );
     return Scaffold(
-      appbar:AppBar(
+      appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text('Counter: $_counter',style: TextStyle(color: Colors.blue,decoration: TextDecoration.none)),
+        child: Text(
+          'Counter: $_counter',
+          style: TextStyle(color: Colors.blue,decoration: TextDecoration.none, fontSize: 50),
+        ),
       ),
-      FloatingActionButton(
-          onPressed: incrementFunction,
-          tooltip: 'Increment',
+      floatingActionButton: FloatingActionButton(
+        onPressed: incrementFunction,
+        tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
     );
