@@ -27,6 +27,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   bool _star1 = false;
+  bool _star2 = false;
+  bool _star3 = false;
+  bool _star4 = false;
+  bool _star5 = false;
 
   void _incrementCounter() {
     setState(() {
@@ -44,11 +48,41 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            GestureDetector(onTap: (){print('Pressed1');},child: Icon(Icons.star, color: Colors.green[500],),),
-            GestureDetector(onTap: (){print('Pressed2');},child: Icon(Icons.star, color: Colors.green[500],),),
-            GestureDetector(onTap: (){print('Pressed3');},child: Icon(Icons.star, color: Colors.green[500],),),
-            GestureDetector(onTap: (){print('Pressed4');},child: Icon(Icons.star, color: Colors.green[500],),),
-            GestureDetector(onTap: (){print('Pressed5');},child: Icon(Icons.star, color: Colors.green[500],),),
+            GestureDetector(onTap: (){setState(() {
+              _star1 = true;
+            });},onDoubleTap: (){
+              setState(() {
+                _star1 = false;
+              });
+            }, child: Icon(Icons.star, color: _star1 ?  Colors.green[500] : Colors.black,),),
+            GestureDetector(onTap: (){setState(() {
+              _star2 = true;
+            });},onDoubleTap: (){
+              setState(() {
+                _star2 = false;
+              });
+            }, child: Icon(Icons.star, color: _star2 ?  Colors.green[500] : Colors.black,),),
+            GestureDetector(onTap: (){setState(() {
+              _star3 = true;
+            });},onDoubleTap: (){
+              setState(() {
+                _star3 = false;
+              });
+            }, child: Icon(Icons.star, color: _star3 ?  Colors.green[500] : Colors.black,),),
+            GestureDetector(onTap: (){setState(() {
+              _star4 = true;
+            });},onDoubleTap: (){
+              setState(() {
+                _star4 = false;
+              });
+            }, child: Icon(Icons.star, color: _star4 ?  Colors.green[500] : Colors.black,),),
+            GestureDetector(onTap: (){setState(() {
+              _star5 = true;
+            });},onDoubleTap: (){
+              setState(() {
+                _star5 = false;
+              });
+            }, child: Icon(Icons.star, color: _star5 ?  Colors.green[500] : Colors.black,),),
           ],
         ),
       ),
